@@ -4,7 +4,18 @@
 
 ## Convert ssd-based object detection model to tflite
 
-### Convert frozen graph to Tensorflow lite flatbuffer format via command line
+### 1. Get tensorflow frozen graph with compatible ops used with TensorFlow Lite
+We start with a checkpoint and get a TensorFlow frozen graph with compatible ops that we can use with TensorFlow Lite. To get the frozen graph, run the export_tflite_ssd_graph.py script from the models/research directory with this command
+
+```bash
+python object_detection/export_tflite_ssd_graph.py \
+--pipeline_config_path=$CONFIG_FILE \
+--trained_checkpoint_prefix=$CHECKPOINT_PATH \
+--output_directory=$OUTPUT_DIR \
+--add_postprocessing_op=true
+```
+
+### 2. Convert frozen graph to Tensorflow lite flatbuffer format via command line
 
 ```bash
 tflite_convert --graph_def_file=tflite_graph.pb \
