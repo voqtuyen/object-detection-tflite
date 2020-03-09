@@ -1,4 +1,4 @@
-# object-detection-tflite
+# Convert ssd-based object detection models to tflite models
 
 
 
