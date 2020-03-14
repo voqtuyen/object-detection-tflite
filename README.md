@@ -18,8 +18,8 @@ python object_detection/export_tflite_ssd_graph.py \
 ### 2. Convert frozen graph to Tensorflow lite flatbuffer format via command line
 
 ```bash
-tflite_convert --graph_def_file=tflite_graph.pb \
---output_file=fdetect.tflite \
+tflite_convert --output_file=fdetect.tflite \
+--graph_def_file=tflite_graph.pb \
 --input_shapes=1,300,300,3 \
 --input_arrays=normalized_input_image_tensor \
 --input_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3' \
