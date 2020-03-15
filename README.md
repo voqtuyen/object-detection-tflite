@@ -22,7 +22,7 @@ tflite_convert --output_file=fdetect.tflite \
 --graph_def_file=tflite_graph.pb \
 --input_shapes=1,300,300,3 \
 --input_arrays=normalized_input_image_tensor \
---input_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3' \
+--output_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3' \
 --inference_type=FLOAT \
 --allow_custom_ops
 
