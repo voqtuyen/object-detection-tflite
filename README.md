@@ -2,6 +2,13 @@
 
 
 
+## Train object detection models with tensorflow object detection api
+
+### Installation
+
+
+
+
 ## Convert ssd-based object detection model to tflite
 
 ### 1. Get tensorflow frozen graph with compatible ops used with TensorFlow Lite
@@ -30,3 +37,4 @@ tflite_convert --output_file=fdetect.tflite \
 
 ## References
 [1] https://www.tensorflow.org/lite/performance/post_training_quantization
+[2] https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md
