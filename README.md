@@ -4,9 +4,13 @@
 
 ## Train object detection models with tensorflow object detection api
 
-### Installation
+### Installation & running locally
 
+Please refer to tensorflow docs: [installation](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md) and [running locally](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_locally.md)
 
+### Notes
+
+- However, you should get the config files from [samples](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs). Otherwise, the resulted tflite model will produce random outputs
 
 
 ## Convert ssd-based object detection model to tflite
@@ -36,5 +40,5 @@ tflite_convert --output_file=fdetect.tflite \
 ```
 
 ## References
-[1] https://www.tensorflow.org/lite/performance/post_training_quantization
+[1] https://www.tensorflow.org/lite/performance/post_training_quantization  
 [2] https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md
